@@ -2,7 +2,7 @@
 
 A modern BitTorrent client built with Java 25 and Spring Boot 3.
 
-![CI](https://github.com/YOUR_NAME/bittorrent-client/actions/workflows/ci.yml/badge.svg)
+![CI](https://github.com/Denis-Balako/jtorrent/actions/workflows/ci.yml/badge.svg)
 ![Java](https://img.shields.io/badge/Java-25-orange)
 ![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.5-green)
 ![License](https://img.shields.io/badge/license-MIT-blue)
