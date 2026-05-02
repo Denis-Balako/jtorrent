@@ -1,0 +1,31 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_DB: bittorrent
+      POSTGRES_USER: bittorrent
+      POSTGRES_PASSWORD: bittorrent
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U bittorrent"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  app:
+    build: .
+    ports:
+      - "8080:8080"
+    environment:
+      DB_USER: bittorrent
+      DB_PASS: bittorrent
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/bittorrent
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+volumes:
+  postgres_data:
