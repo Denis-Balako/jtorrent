@@ -30,7 +30,7 @@ Open `http://localhost:8080/actuator/health`
 ## Roadmap
 
 - [x] v0.1 — Project scaffold, CI/CD
-- [ ] v0.2 — Bencode parser + .torrent metainfo
+- [x] v0.2 — Bencode parser + .torrent metainfo
 - [ ] v0.3 — Tracker HTTP/UDP client
 - [ ] v0.4 — Peer wire protocol
 - [ ] v0.5 — REST API + Web UI
